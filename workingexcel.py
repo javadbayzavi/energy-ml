@@ -30,3 +30,5 @@ print(df2)
 #SuperVised learning (Classification and regression based on labeled features, naive bayes, nenural nets, k-nearest)
 #Semisupervised learning (Clusering and then classify )
 #Reinforcement learning (learn through trial and error)
+#https://scikit-learn.org/stable/datasets.html
+
