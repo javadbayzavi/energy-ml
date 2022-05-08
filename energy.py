@@ -1,3 +1,4 @@
+from numpy import dtype
 from sklearn  import svm, datasets
 import pandas as pd
 from matplotlib import pyplot
@@ -13,7 +14,22 @@ df = pd.read_excel("data.xlsx", sheet_name="Steam,(101-E-202)")
 
 #Scatter plot
 
-#pyplot.show()
+df.iloc[1] = df.iloc[1].convert_dtypes("float32")
+df.iloc[2] = df.iloc[2].convert_dtypes("float32")
+df.iloc[3] = df.iloc[3].convert_dtypes("float32")
+df.iloc[4] = df.iloc[4].convert_dtypes("float32")
+df.iloc[5] = df.iloc[5].convert_dtypes("float32")
+
+
+print(df.dtypes)
 
 dl = svm.SVC()
-dl.predict
+X = df.values[2:, 1:2]
+y = df.values[2:, 2:5]
+y = y.astype("float32")
+print(y)
+#dl.fit(y,X)
+
+#res = dl.predict([[145.85,90.5,133.09,7.55]])
+#print(res)
+

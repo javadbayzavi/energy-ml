@@ -43,5 +43,5 @@ d = dict([(y,x) for x,y in enumerate(sorted(set(s)))])
 y = [d[x] for x in s]
 
 ml = svm.SVC()
-ml.fit(x,y)
+ml.fit(X,y)
 prediction = ml.predict([[5.4,3,2]])
