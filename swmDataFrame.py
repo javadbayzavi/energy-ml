@@ -3,6 +3,7 @@ import pandas as pd
 from matplotlib import pyplot
 from pandas.plotting import scatter_matrix
 
+
 #df = pd.read_csv("")
 irisiflowers = datasets.load_iris()
 df = irisiflowers
@@ -45,3 +46,5 @@ y = [d[x] for x in s]
 ml = svm.SVC()
 ml.fit(X,y)
 prediction = ml.predict([[5.4,3,2]])
+
+print(df.sys_initial)

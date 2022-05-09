@@ -26,9 +26,12 @@ print(df.dtypes)
 dl = svm.SVC()
 X = df.values[2:, 1:2]
 y = df.values[2:, 2:5]
-y = y.astype("float32")
+#y = y.astype("float32")
 print(y)
 #dl.fit(y,X)
+for xx in y:
+    if type(xx) == "object":
+        print(xx)
 
 #res = dl.predict([[145.85,90.5,133.09,7.55]])
 #print(res)
